@@ -1,0 +1,32 @@
+[project]
+name = "whatsapp-automation"
+version = "0.1.0"
+description = "Single-user WhatsApp Web automation platform."
+requires-python = ">=3.11"
+dependencies = [
+    "selenium>=4.0.0",
+    "webdriver-manager>=3.8.0",
+    "sqlalchemy>=2.0",
+    "alembic>=1.8",
+    "streamlit>=1.30",
+    "typer>=0.9",
+    "apscheduler>=3.10",
+    "pydantic>=2.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+    "black",
+    "mypy",
+]
+
+[project.scripts]
+whatsapp-automation = "whatsapp_automation.cli.main:app"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
