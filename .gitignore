@@ -88,5 +88,9 @@ env/
 # Chrome driver profile
 chrome-profile/
 
+# Database files
+*.db
+*.sqlite
+
 # Logs
 logs/
